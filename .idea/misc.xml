@@ -4,9 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/USER/AndroidStudioProjects/Lexi_App/app/src/main/res/layout/activity_main.xml" value="0.1956521739130435" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Lexi_App/app/src/main/res/layout/course_item.xml" value="0.1956521739130435" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Lexi_App/app/src/main/res/layout/dialog_share.xml" value="0.1956521739130435" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Lexi_App/app/src/main/res/layout/fragment_course.xml" value="0.1956521739130435" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Lexi_App/app/src/main/res/layout/fragment_dashboard.xml" value="0.1956521739130435" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Lexi_App/app/src/main/res/layout/fragment_home.xml" value="0.1956521739130435" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Lexi_App/app/src/main/res/layout/fragment_notifications.xml" value="0.1956521739130435" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Lexi_App/app/src/main/res/layout/language_item.xml" value="0.1956521739130435" />
       </map>
     </option>
   </component>

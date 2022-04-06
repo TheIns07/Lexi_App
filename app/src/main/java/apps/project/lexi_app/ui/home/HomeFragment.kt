@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.GridView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -12,6 +13,7 @@ import apps.project.lexi_app.databinding.FragmentHomeBinding
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
+    var languages : ArrayList<Language> = ArrayList<Language>()
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -28,11 +30,24 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
+        fill_languages()
+
+        val gridView: GridView = binding.gridView
+        val adapter = LanguageAdapter(root.context, languages)
+
+        gridView.adapter = adapter
+
+
         return root
+    }
+
+    fun fill_languages(){
+        languages.add(Language("image", "Ingles"))
+        languages.add(Language("image", "Aleman"))
+        languages.add(Language("image", "Frances"))
+        languages.add(Language("image", "Chino"))
+        languages.add(Language("image", "Japones"))
+        languages.add(Language("image", "Portugues"))
     }
 
     override fun onDestroyView() {
