@@ -5,7 +5,7 @@
         android:endColor="@color/hard_yellow"
         android:angle="-90"/>
     <corners
-        android:radius="24dp"
+        android:radius="@dimen/activity_radius"
 
         />
 

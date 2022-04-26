@@ -5,7 +5,8 @@
         android:endColor="@color/main_pink"
         android:angle="-90"/>
     <corners
-        android:radius="24dp"
+        android:radius="@dimen/activity_radius"
+
 
         />
 
