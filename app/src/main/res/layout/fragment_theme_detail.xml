@@ -103,7 +103,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        app:cardBackgroundColor="#69ADE1"
+        app:cardBackgroundColor="@color/main_blue"
         app:cardCornerRadius="6dp"
         app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="@+id/cardView3"
