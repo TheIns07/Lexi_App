@@ -20,6 +20,9 @@
     <color name = "light_yellow">#F9F29F</color>
     <color name = "hard_yellow">#FAFA9C</color>
 
+    <color name = "hard_green">#88DCA7</color>
+    <color name = "soft_green">#86daa5</color>
+
     <color name="black">#FF000000</color>
     <color name = "gray">#BCBBBB</color>
     <color name="white">#FFFFFFFF</color>
