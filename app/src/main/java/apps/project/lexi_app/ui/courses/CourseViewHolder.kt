@@ -4,18 +4,26 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import apps.project.lexi_app.R
+import apps.project.lexi_app.databinding.CourseItemBinding
 
 class CourseViewHolder (view: View): RecyclerView.ViewHolder(view){
 
-    val course = view.findViewById<TextView>(R.id.tv_name_course)
-    val imageView = view.findViewById<ImageView>(R.id.iv_course)
-    val progress1 = view.findViewById<ProgressBar>(R.id.pb_one)
+    val binding = CourseItemBinding.bind(view)
+
 
     fun render(courseModel: Course){
-        course.text = courseModel.name
-        imageView.setImageResource(courseModel.image)
-        progress1.progress = courseModel.progress
+        binding.tvNameCourse.text = courseModel.name
+        binding.ivCourse.setImageResource(courseModel.image)
+        binding.pbOne.progress = courseModel.progress
+        //binding.itemCourse.setOnClickListener{
+       //         v ->
+       //     val activity = v!!.context as AppCompatActivity
+        //    val coursesFragment = CourseFragment()
+        //    activity.supportFragmentManager.beginTransaction()
+        //        .replace(R.id.nav_host_fragment_activity_main, coursesFragment).addToBackStack(null).commitAllowingStateLoss()
+        //}
     }
 }

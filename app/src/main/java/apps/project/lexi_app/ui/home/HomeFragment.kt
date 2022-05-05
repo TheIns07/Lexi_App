@@ -8,6 +8,7 @@ import android.widget.GridView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import apps.project.lexi_app.R
 import apps.project.lexi_app.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -35,19 +36,20 @@ class HomeFragment : Fragment() {
         val gridView: GridView = binding.gridView
         val adapter = LanguageAdapter(root.context, languages)
 
+
         gridView.adapter = adapter
-
-
         return root
     }
 
     fun fill_languages(){
-        languages.add(Language("image", "Ingles"))
-        languages.add(Language("image", "Aleman"))
-        languages.add(Language("image", "Frances"))
-        languages.add(Language("image", "Chino"))
-        languages.add(Language("image", "Japones"))
-        languages.add(Language("image", "Portugues"))
+        languages.add(Language(R.drawable.fr_flag, "Ingles"))
+        languages.add(Language( R.drawable.uk_flag,"Frances"))
+        languages.add(Language(R.drawable.fr_flag, "Aleman"))
+        languages.add(Language(R.drawable.uk_flag, "Italiano"))
+        languages.add(Language(R.drawable.fr_flag, "Ruso"))
+        languages.add(Language(R.drawable.uk_flag, "Japones"))
+        languages.add(Language(R.drawable.fr_flag, "Coreano"))
+        languages.add(Language(R.drawable.uk_flag, "Chino"))
     }
 
     override fun onDestroyView() {

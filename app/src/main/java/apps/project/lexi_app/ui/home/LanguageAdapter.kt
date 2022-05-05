@@ -42,13 +42,13 @@ class LanguageAdapter: BaseAdapter {
         val tv_name_language: TextView = view.findViewById(R.id.tv_name_language)
 
         tv_name_language.setText(language.name)
-        iv_language.setBackgroundResource(R.color.black)
+        iv_language.setBackgroundResource(language.image)
 
         view.setOnClickListener { v ->
             val activity = v!!.context as AppCompatActivity
             val coursesFragment = CourseFragment()
             activity.supportFragmentManager.beginTransaction()
-                .replace(R.id.container, coursesFragment).addToBackStack(null).commitAllowingStateLoss()
+                .replace(R.id.nav_host_fragment_activity_main, coursesFragment).addToBackStack(null).commitAllowingStateLoss()
         }
 
 
