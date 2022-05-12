@@ -45,7 +45,7 @@ class ThemesFragment : Fragment() {
         adapter.listener = object : OnThemeListener {
             override fun onClick() {
                 requireActivity().supportFragmentManager.beginTransaction()
-                    .add(R.id.nav_host_fragment_activity_main,ThemeDetailFragment())
+                    .replace(R.id.nav_host_fragment_activity_main,ThemeDetailFragment())
                     .addToBackStack(null)
                     .commit()
             }

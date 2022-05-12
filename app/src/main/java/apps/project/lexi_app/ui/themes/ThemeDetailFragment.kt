@@ -25,12 +25,13 @@ class ThemeDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         bindAdapter()
-        binding.btnTitle.setOnClickListener {
+
+        binding.textView7.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction()
-                .add(R.id.nav_host_fragment_activity_main,TitleThemeFragment())
-                .addToBackStack(null)
+                .replace(R.id.nav_host_fragment_activity_main,FillFragment())
                 .commit()
         }
+
         binding.btnBack.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction()
                 .remove(this).commit()

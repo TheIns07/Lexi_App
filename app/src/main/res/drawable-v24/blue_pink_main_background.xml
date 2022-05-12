@@ -4,10 +4,4 @@
         android:startColor="@color/main_blue"
         android:endColor="@color/main_pink"
         android:angle="-90"/>
-    <corners
-        android:radius="@dimen/activity_radius"
-
-
-        />
-
 </shape>

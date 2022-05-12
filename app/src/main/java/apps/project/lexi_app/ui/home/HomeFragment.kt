@@ -42,7 +42,7 @@ class HomeFragment : Fragment() {
     }
 
     fun fill_languages(){
-        languages.add(Language(R.drawable.fr_flag, "Ingles"))
+        languages.add(Language(R.drawable.uk_flag, "Ingles"))
         languages.add(Language( R.drawable.uk_flag,"Frances"))
         languages.add(Language(R.drawable.fr_flag, "Aleman"))
         languages.add(Language(R.drawable.uk_flag, "Italiano"))

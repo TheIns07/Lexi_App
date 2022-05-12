@@ -32,7 +32,6 @@ class FillFragment : Fragment(){
             onDestroyView()
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.nav_host_fragment_activity_main,GridVoiceFragment())
-                .addToBackStack(null)
                 .commit()
         }
     }

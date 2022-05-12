@@ -9,9 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Lexi_App">
-        <activity
-            android:name=".ui.themes.ThemesCourseActivity"
-            android:exported="false" />
 
         <activity
             android:name=".MainActivity"

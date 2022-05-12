@@ -53,6 +53,7 @@
         android:background="@drawable/blue_pink_main_background"
         android:text="Confirmar"
         android:textColor="@color/white"
+        android:gravity="center"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,9 +75,10 @@
         tools:listitem="@layout/item_theme_detail" />
 
     <TextView
-        android:layout_width="277dp"
-        android:layout_height="66dp"
-        android:text="Basketball"
+        android:layout_width="275dp"
+        android:layout_height="74dp"
+        android:gravity="center"
+        android:text="Happy"
         android:textSize="55dp"
         app:layout_constraintBottom_toTopOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
@@ -89,7 +91,7 @@
         android:layout_width="117dp"
         android:layout_height="112dp"
         android:layout_marginTop="64dp"
-        android:src="@drawable/th_deportes"
+        android:src="@drawable/happy"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -98,10 +100,10 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="117dp"
-        android:layout_height="49dp"
+        android:layout_width="243dp"
+        android:layout_height="40dp"
         android:layout_marginTop="88dp"
-        android:text="Español"
+        android:text="Traducir al Español"
         android:textAlignment="center"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="@+id/grid_layout_options"

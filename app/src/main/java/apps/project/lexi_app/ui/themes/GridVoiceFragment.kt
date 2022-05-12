@@ -31,7 +31,6 @@ class GridVoiceFragment: Fragment() {
 
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.nav_host_fragment_activity_main,FillFragment())
-                .addToBackStack(null)
                 .commit()
         }
 
