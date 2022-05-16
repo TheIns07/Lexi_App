@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import apps.project.lexi_app.R
 import apps.project.lexi_app.databinding.FragmentThemeDetailBinding
+import apps.project.lexi_app.ui.Activities.Fill.FillFragment
 
 
 class ThemeDetailFragment : Fragment() {
@@ -28,7 +29,7 @@ class ThemeDetailFragment : Fragment() {
 
         binding.textView7.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.nav_host_fragment_activity_main,FillFragment())
+                .replace(R.id.nav_host_fragment_activity_main, FillFragment())
                 .commit()
         }
 

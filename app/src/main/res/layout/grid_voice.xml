@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
@@ -75,12 +76,13 @@
         tools:listitem="@layout/item_theme_detail" />
 
     <TextView
+        android:id="@+id/title_grid"
         android:layout_width="275dp"
         android:layout_height="74dp"
         android:gravity="center"
         android:text="Happy"
         android:textSize="55dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintBottom_toTopOf="@+id/activity_grid"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_grid"
@@ -99,7 +101,7 @@
         app:layout_constraintVertical_bias="0.054" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/activity_grid"
         android:layout_width="243dp"
         android:layout_height="40dp"
         android:layout_marginTop="88dp"
