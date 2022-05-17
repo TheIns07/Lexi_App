@@ -26,6 +26,7 @@ class FillFragment : Fragment(){
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        bindAdapter()
         super.onViewCreated(view, savedInstanceState)
         binding.btnBack.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction()
@@ -45,13 +46,13 @@ class FillFragment : Fragment(){
     }
 
     fun bindAdapter(){
-        val adapter = GridAdapter()
+        val adapter = FillAdapter()
         adapter.list = arrayListOf(
-            Grid("Beauty"),
-            Grid("Mama"),
-            Grid("Tencent"),
-            Grid("Fiorentina")
+            Fill("I am", "a man"),
+            Fill("We are", "the plaza tonight"),
+            Fill("Are you"," Eric Andre?"),
+            Fill("Can you", "5 minutes?")
         )
-        //binding.rv_options.adapter = adapter
+        binding.rvOptions.adapter = adapter
     }
 }

@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import apps.project.lexi_app.R
 import apps.project.lexi_app.databinding.BoxVoiceBinding
 import apps.project.lexi_app.ui.Activities.Fill.FillFragment
+import apps.project.lexi_app.ui.notifications.NotificationsFragment
 
 
 class TopicsFragment: Fragment(){
@@ -32,7 +33,7 @@ class TopicsFragment: Fragment(){
         binding.buttonGridConfirm.setOnClickListener {
             super.onDestroyView()
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.nav_host_fragment_activity_main, FillFragment())
+                .replace(R.id.nav_host_fragment_activity_main, NotificationsFragment())
                 .addToBackStack(null)
                 .commit()
         }

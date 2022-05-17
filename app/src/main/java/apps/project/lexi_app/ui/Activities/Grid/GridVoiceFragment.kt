@@ -1,20 +1,21 @@
 package apps.project.lexi_app.ui.Activities.Grid
 
+import android.content.ContentValues.TAG
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import apps.project.lexi_app.R
 import apps.project.lexi_app.databinding.GridVoiceBinding
-import apps.project.lexi_app.ui.Activities.Fill.Fill
 import apps.project.lexi_app.ui.Activities.Fill.FillFragment
-import apps.project.lexi_app.ui.myCourses.Course
-import apps.project.lexi_app.ui.myCourses.MyCoursesAdapter
-import apps.project.lexi_app.ui.myCourses.OnCourseListener
-import apps.project.lexi_app.ui.themes.OptionThemeAdapter
-import apps.project.lexi_app.ui.themes.Options
-import apps.project.lexi_app.ui.themes.ThemesFragment
+import apps.project.lexi_app.ui.Activities.Topics.TopicsFragment
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
+
 
 class GridVoiceFragment: Fragment() {
 
@@ -40,13 +41,38 @@ class GridVoiceFragment: Fragment() {
 
         bindAdapter()
 
+        val database = FirebaseDatabase.getInstance()
+        val myRef = database.getReference("dummy_data").child("grid_data")
+        val titulogrid = myRef.child("grid_actions")
+
+
+
+
+        /*titulogrid.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val value = dataSnapshot.getValue(String::class.java)
+                binding.activityGrid.text = "$value"
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                // Failed to read value
+                Log.w(TAG, "Failed to read value.", error.toException())
+            }
+        })*/
+
         binding.btnBack.setOnClickListener {
             requireActivity().onBackPressed()
         }
 
         binding.gridLayoutOptions.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.nav_host_fragment_activity_main, FillFragment())
+                .replace(R.id.nav_host_fragment_activity_main, TopicsFragment())
+                .commit()
+        }
+
+        binding.buttonGridConfirm.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.nav_host_fragment_activity_main, TopicsFragment())
                 .commit()
         }
 
@@ -54,13 +80,19 @@ class GridVoiceFragment: Fragment() {
     }
 
     fun bindAdapter(){
+
+
         val adapter = GridAdapter()
+
         adapter.list = arrayListOf(
-            Grid("Beauty"),
-            Grid("Mama"),
-            Grid("Tencent"),
-            Grid("Fiorentina")
+           Grid("Happy"),
+            Grid("Sad"),
+            Grid("Normal"),
+            Grid("Trained")
         )
+
+
+
         binding.gridLayoutOptions.adapter = adapter
     }
 }
