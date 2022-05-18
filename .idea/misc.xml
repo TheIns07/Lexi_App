@@ -6,7 +6,10 @@
         <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/drawable-v24/blue_pink_main_background.xml" value="0.226" />
         <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/drawable-v24/blues_background.xml" value="0.309" />
         <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/drawable-v24/green_blue_background.xml" value="0.226" />
+        <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.228" />
         <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/drawable/ic_baseline_brightness_1_24.xml" value="0.276" />
+        <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/drawable/ic_baseline_screen_share_24.xml" value="0.228" />
+        <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.228" />
         <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/drawable/splash_screen.xml" value="0.276" />
         <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/drawable/white_background.xml" value="0.309" />
         <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/drawable/white_border_black.xml" value="0.276" />
@@ -22,6 +25,7 @@
         <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/layout/fragment_notifications.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/layout/fragment_text.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/layout/fragment_theme_detail.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/layout/fragment_themes.xml" value="0.25" />
         <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/layout/fragment_title_theme.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/layout/grid_voice.xml" value="0.3560606060606061" />
         <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/layout/iniciosesion.xml" value="0.25" />

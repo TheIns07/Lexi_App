@@ -43,13 +43,13 @@ class HomeFragment : Fragment() {
 
     fun fill_languages(){
         languages.add(Language(R.drawable.uk_flag, "Ingles"))
-        languages.add(Language( R.drawable.uk_flag,"Frances"))
-        languages.add(Language(R.drawable.fr_flag, "Aleman"))
-        languages.add(Language(R.drawable.uk_flag, "Italiano"))
-        languages.add(Language(R.drawable.fr_flag, "Ruso"))
-        languages.add(Language(R.drawable.uk_flag, "Japones"))
-        languages.add(Language(R.drawable.fr_flag, "Coreano"))
-        languages.add(Language(R.drawable.uk_flag, "Chino"))
+        languages.add(Language( R.drawable.francia,"Frances"))
+        languages.add(Language(R.drawable.alemania, "Aleman"))
+        languages.add(Language(R.drawable.italia, "Italiano"))
+        languages.add(Language(R.drawable.rusia, "Ruso"))
+        languages.add(Language(R.drawable.japon, "Japones"))
+        languages.add(Language(R.drawable.corea, "Coreano"))
+        languages.add(Language(R.drawable.china, "Chino"))
     }
 
     override fun onDestroyView() {

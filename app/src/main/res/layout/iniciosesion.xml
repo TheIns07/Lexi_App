@@ -104,7 +104,7 @@
         app:srcCompat="@drawable/ic_baseline_brightness_1_24" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/password_forget"
         style="?android:attr/buttonBarButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
