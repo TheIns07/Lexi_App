@@ -1,20 +1,16 @@
 package apps.project.lexi_app.ui.Activities.Grid
 
-import android.content.ContentValues.TAG
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.GridLayout
+import android.widget.RelativeLayout
 import androidx.fragment.app.Fragment
 import apps.project.lexi_app.R
 import apps.project.lexi_app.databinding.GridVoiceBinding
-import apps.project.lexi_app.ui.Activities.Fill.FillFragment
 import apps.project.lexi_app.ui.Activities.Topics.TopicsFragment
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
 
 
 class GridVoiceFragment: Fragment() {

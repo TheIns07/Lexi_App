@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import apps.project.lexi_app.R
 import apps.project.lexi_app.databinding.FragmentCourseBinding
+import apps.project.lexi_app.ui.Activities.Topics.TopicsFragment
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -45,6 +46,12 @@ class CourseFragment : Fragment() {
         val recyclerView:RecyclerView = binding.recyclerCourse
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.adapter = CourseAdapter(CourseProvider.courseList)
+
+        recyclerView.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.nav_host_fragment_activity_main, TopicsFragment())
+                .commit()
+        }
 
         return root
     }

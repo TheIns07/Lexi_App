@@ -8,14 +8,20 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import apps.project.lexi_app.databinding.ActivityMainBinding
+import apps.project.lexi_app.databinding.IniciosesionBinding
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var binding_: IniciosesionBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        Thread.sleep(2000);
+        setTheme(R.style.SplashTheme)
+        setTheme(R.style.Theme_Lexi_App)
         super.onCreate(savedInstanceState)
 
+        binding_ = IniciosesionBinding.inflate(layoutInflater)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

@@ -4,7 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/drawable-v24/blue_pink_main_background.xml" value="0.226" />
+        <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/drawable-v24/blues_background.xml" value="0.309" />
         <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/drawable-v24/green_blue_background.xml" value="0.226" />
+        <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/drawable/ic_baseline_brightness_1_24.xml" value="0.276" />
+        <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/drawable/splash_screen.xml" value="0.276" />
+        <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/drawable/white_background.xml" value="0.309" />
+        <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/drawable/white_border_black.xml" value="0.276" />
         <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/layout/box_voice.xml" value="0.2726449275362319" />
         <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/layout/complete_text.xml" value="0.36666666666666664" />
@@ -19,12 +24,16 @@
         <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/layout/fragment_theme_detail.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/layout/fragment_title_theme.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/layout/grid_voice.xml" value="0.3560606060606061" />
+        <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/layout/iniciosesion.xml" value="0.25" />
+        <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/layout/introduction.xml" value="0.30572916666666666" />
         <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/layout/item_courses.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/layout/item_grid.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/layout/item_theme.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/layout/item_theme_detail.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/layout/language_item.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/layout/mail_recovery.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/layout/registro_aplicacion.xml" value="0.2713541666666667" />
+        <entry key="..\:/Users/Artur/Desktop/ITSON/Ene - May 2022/AppMoviles/zEFER/app/src/main/res/layout/splash_screen.xml" value="0.2713541666666667" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Lexi_App/app/src/main/res/drawable-v24/blue_only_background.xml" value="0.1625" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Lexi_App/app/src/main/res/drawable-v24/blue_pink_main_background.xml" value="0.1625" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Lexi_App/app/src/main/res/drawable-v24/blue_pink_yellow_background.xml" value="0.141" />
