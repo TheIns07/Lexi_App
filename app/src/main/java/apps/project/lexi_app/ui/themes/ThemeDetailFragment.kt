@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.Toast
 import apps.project.lexi_app.R
 import apps.project.lexi_app.databinding.FragmentThemeDetailBinding
@@ -35,7 +36,7 @@ class ThemeDetailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         bindAdapter(binding)
 
-        binding.titleGrid.setOnClickListener {
+        binding.buttonGridConfirm.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.nav_host_fragment_activity_main, FillFragment())
                 .commit()
@@ -46,6 +47,41 @@ class ThemeDetailFragment : Fragment() {
                 .remove(this).commit()
         }
     }
+
+    fun answers(){
+        val db = Firebase.firestore
+        var answer1: String = ""
+        var answer2: String = ""
+        var result: Int = 0
+
+        var mEdit: EditText = binding.rvOptions.findViewById(R.id.editText_main);
+
+        db.collection("dummy_data/dummy_data/fill_data")
+            .whereEqualTo("languaje", "ingles")
+            .whereEqualTo("theme", "ocupacion")
+            .limit(1)
+            .get()
+            .addOnSuccessListener { documents ->
+                for(document in documents) {
+                    if (document != null) {
+                        answer1 = document.get("answer1").toString()
+                        answer2 = document.get("answer2").toString()
+                    }
+                }
+
+                if(mEdit.text.equals(answer1) || mEdit.text.equals(answer2)){
+                    Toast.makeText(context, "Respuesta Correcta", Toast.LENGTH_SHORT).show()
+                }
+                else {
+                    Toast.makeText(context, "Respuesta Correcta", Toast.LENGTH_SHORT).show()
+                }
+            }
+            .addOnFailureListener { exception ->
+                Toast.makeText(context, "Error al cargar los datos", Toast.LENGTH_SHORT).show()
+            }
+    }
+
+
 
     fun bindAdapter(binding: FragmentThemeDetailBinding){
             val db = Firebase.firestore
@@ -86,6 +122,7 @@ class ThemeDetailFragment : Fragment() {
 
                         adapter.listener = object : OnGridListener {
                             override fun onClick() {
+
                                 requireActivity().supportFragmentManager.beginTransaction()
                                     .replace(R.id.nav_host_fragment_activity_main, TopicsFragment())
                                     .addToBackStack(null)
