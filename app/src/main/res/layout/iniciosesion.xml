@@ -19,7 +19,7 @@
         android:inputType="textEmailAddress"
         android:text="Correo electrónico"
         android:textColor="@color/gray"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,7 +45,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/inicio_sesion"
         android:layout_width="272dp"
         android:layout_height="64dp"
         android:layout_marginTop="20dp"
@@ -62,19 +62,19 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="244dp"
-        android:layout_height="50dp"
+        android:id="@+id/crear_cuenta"
+        android:layout_width="255dp"
+        android:layout_height="56dp"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="76dp"
         android:background="@drawable/white_background"
         android:fontFamily="@font/myriadpro_regular"
         android:text="Crear cuenta"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/imageView10"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/inicio_sesion"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
@@ -93,10 +93,9 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="392dp"
-        android:layout_height="313dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginTop="560dp"
-
         app:tint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -124,12 +123,13 @@
         android:id="@+id/imageView9"
         android:layout_width="59dp"
         android:layout_height="57dp"
+        android:layout_marginBottom="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageView10"
-        app:layout_constraintHorizontal_bias="0.895"
+        app:layout_constraintHorizontal_bias="0.909"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
-        app:layout_constraintVertical_bias="0.614"
+        app:layout_constraintTop_toBottomOf="@+id/crear_cuenta"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/trans_facebook" />
 
     <ImageView
@@ -138,23 +138,24 @@
         android:layout_height="46dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageView11"
-        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintHorizontal_bias="0.927"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView7"
-        app:layout_constraintVertical_bias="0.704"
+        app:layout_constraintVertical_bias="0.648"
         app:srcCompat="@drawable/trans_twitter" />
 
     <ImageView
         android:id="@+id/imageView11"
         android:layout_width="45dp"
         android:layout_height="46dp"
+        android:layout_marginBottom="44dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.737"
+        app:layout_constraintHorizontal_bias="0.702"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
-        app:layout_constraintVertical_bias="0.654"
-        app:srcCompat="@drawable/googleg_disabled_color_18" />
+        app:layout_constraintTop_toBottomOf="@+id/crear_cuenta"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/trans_google" />
 
     <TextView
         android:id="@+id/textView12"
@@ -165,9 +166,9 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.537"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView10"
-        app:layout_constraintVertical_bias="0.529" />
+        app:layout_constraintVertical_bias="0.631" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

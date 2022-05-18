@@ -10,7 +10,6 @@ import apps.project.lexi_app.databinding.GridVoiceBinding
 import apps.project.lexi_app.databinding.IntroductionBinding
 import apps.project.lexi_app.ui.Activities.Topics.TopicsFragment
 import apps.project.lexi_app.ui.themes.ThemeDetailFragment
-import com.google.firebase.database.FirebaseDatabase
 
 class IntroductionFragment: Fragment() {
     private var _binding: IntroductionBinding? = null

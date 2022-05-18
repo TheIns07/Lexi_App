@@ -10,7 +10,6 @@ import androidx.fragment.app.Fragment
 import apps.project.lexi_app.R
 import apps.project.lexi_app.databinding.GridVoiceBinding
 import apps.project.lexi_app.ui.Activities.Topics.TopicsFragment
-import com.google.firebase.database.FirebaseDatabase
 
 
 class GridVoiceFragment: Fragment() {
@@ -37,14 +36,14 @@ class GridVoiceFragment: Fragment() {
 
         bindAdapter()
 
-        val database = FirebaseDatabase.getInstance()
+        /*val database = FirebaseDatabase.getInstance()
         val myRef = database.getReference("dummy_data").child("grid_data")
         val titulogrid = myRef.child("grid_actions")
 
 
 
 
-        /*titulogrid.addValueEventListener(object : ValueEventListener {
+        titulogrid.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 val value = dataSnapshot.getValue(String::class.java)
                 binding.activityGrid.text = "$value"
