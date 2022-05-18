@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_home, R.id.myCoursesFragment, R.id.navigation_notifications
             )
         )
-        //etupActionBarWithNavController(navController, appBarConfiguration)
+        //setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
 }
