@@ -36,7 +36,7 @@ class ThemesFragment : Fragment() {
             Theme(R.drawable.th_peliculas,"Películas/Series"),
             Theme(R.drawable.th_deportes,"Deportes"),
             Theme(R.drawable.th_musica,"Música"),
-            Theme(R.drawable.th_gastronomia,"Gastronomía"),
+            Theme(R.drawable.th_gastronomia,"Frases"),
             Theme(R.drawable.th_historia,"Historia"),
             Theme(R.drawable.th_moda,"Moda"),
             Theme(R.drawable.th_tadiciones,"Tradiciones"))
