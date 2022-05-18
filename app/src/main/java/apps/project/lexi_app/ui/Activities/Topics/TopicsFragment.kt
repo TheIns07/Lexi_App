@@ -53,12 +53,12 @@ class TopicsFragment: Fragment(){
         var action_box_voice: String
         var instruction_voice: String
 
-        db.collection("dummy_data/dummy_data/voice_data").document("AYfj4vJaTlw5hSI2KF1H")
+        db.collection("dummy_data/dummy_data/box_data").document("96aPmuIpqXy1FwdIG8Ht")
             .get()
             .addOnSuccessListener { document ->
                 if(document != null){
-                    action_box_voice = document.get("action").toString()
-                    instruction_voice = document.get("words_action").toString()
+                    action_box_voice = document.get("activity_box").toString()
+                    instruction_voice = document.get("instruction_voice").toString()
 
                     binding.actionBoxVoice.setText(action_box_voice)
                     binding.instructionVoice.setText(instruction_voice)
