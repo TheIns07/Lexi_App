@@ -59,49 +59,56 @@ class GridVoiceFragment: Fragment() {
 
     fun bindAdapter(binding: GridVoiceBinding){
         val db = Firebase.firestore
-        var gridAction: String
-        var gridTitle: String
-        var field1: String
-        var field2: String
-        var field3: String
-        var field4: String
-        db.collection("dummy_data/dummy_data/grid_data").document("InnrueTTIMuXXbCiLKeu")
+        var gridAction: String = ""
+        var gridTitle: String = ""
+        var field1: String = ""
+        var field2: String = ""
+        var field3: String = ""
+        var field4: String = ""
+
+        db.collection("dummy_data/dummy_data/grid_data")
+            .whereEqualTo("languaje", "aleman")
+            .whereEqualTo("theme", "ocupacion")
+            .limit(1)
             .get()
-            .addOnSuccessListener { document ->
-                if(document != null){
-                    gridAction = document.get("grid_actions").toString()
-                    gridTitle = document.get("titulo_grid").toString()
-                    field1 = document.get("field1").toString()
-                    field2 = document.get("field2").toString()
-                    field3 = document.get("field3").toString()
-                    field4 = document.get("field4").toString()
+            .addOnSuccessListener { documents ->
+                for(document in documents) {
+                    if (document != null) {
+                        gridAction = document.get("grid_actions").toString()
+                        gridTitle = document.get("titulo_grid").toString()
+                        field1 = document.get("field1").toString()
+                        field2 = document.get("field2").toString()
+                        field3 = document.get("field3").toString()
+                        field4 = document.get("field4").toString()
+                    }
+                }
+                binding.titleGrid.setText(gridTitle);
+                binding.activityGrid.setText(gridAction);
 
-                    binding.titleGrid.setText(gridTitle);
-                    binding.activityGrid.setText(gridAction);
+                val adapter = GridAdapter()
 
-                    val adapter = GridAdapter()
+                adapter.list = arrayListOf(
+                    Grid(field1),
+                    Grid(field2),
+                    Grid(field3),
+                    Grid(field4)
+                )
+                binding.gridLayoutOptions.adapter = adapter
 
-                    adapter.list = arrayListOf(
-                        Grid(field1),
-                        Grid(field2),
-                        Grid(field3),
-                        Grid(field4)
-                    )
-                    binding.gridLayoutOptions.adapter = adapter
-
-                    adapter.listener = object : OnGridListener {
-                        override fun onClick() {
-                            requireActivity().supportFragmentManager.beginTransaction()
-                                .replace(R.id.nav_host_fragment_activity_main, TopicsFragment())
-                                .addToBackStack(null)
-                                .commit()
-                        }
+                adapter.listener = object : OnGridListener {
+                    override fun onClick() {
+                        requireActivity().supportFragmentManager.beginTransaction()
+                            .replace(R.id.nav_host_fragment_activity_main, TopicsFragment())
+                            .addToBackStack(null)
+                            .commit()
                     }
                 }
             }
             .addOnFailureListener { exception ->
                 Toast.makeText(context, "Error al cargar los datos", Toast.LENGTH_SHORT).show()
             }
+
+
 
     }
 

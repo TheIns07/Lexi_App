@@ -49,23 +49,28 @@ class ThemeDetailFragment : Fragment() {
 
     fun bindAdapter(binding: FragmentThemeDetailBinding){
             val db = Firebase.firestore
-            var gridAction: String
-            var gridTitle: String
-            var field1: String
-            var field2: String
-            var field3: String
-            var field4: String
-            db.collection("dummy_data/dummy_data/grid_data").document("SdlYPDW2GTstBpvXfoKK")
+            var gridAction: String = ""
+            var gridTitle: String = ""
+            var field1: String = ""
+            var field2: String = ""
+            var field3: String = ""
+            var field4: String = ""
+            db.collection("dummy_data/dummy_data/grid_data")
+                .whereEqualTo("languaje", "aleman")
+                .whereEqualTo("theme", "ocupacion")
                 .get()
-                .addOnSuccessListener { document ->
-                    if(document != null){
+                .addOnSuccessListener { documents ->
+                    for(document in documents) {
+                    if(document != null) {
                         gridAction = document.get("grid_actions").toString()
                         gridTitle = document.get("titulo_grid").toString()
                         field1 = document.get("field1").toString()
                         field2 = document.get("field2").toString()
                         field3 = document.get("field3").toString()
                         field4 = document.get("field4").toString()
+                    }
 
+                    }
                         binding.titleGrid.setText(gridTitle);
                         binding.textView8.setText(gridAction);
 
@@ -87,7 +92,6 @@ class ThemeDetailFragment : Fragment() {
                                     .commit()
                             }
                         }
-                    }
                 }
                 .addOnFailureListener { exception ->
                     Toast.makeText(context, "Error al cargar los datos", Toast.LENGTH_SHORT).show()

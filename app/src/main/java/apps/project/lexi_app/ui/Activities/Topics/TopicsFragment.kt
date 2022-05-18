@@ -50,26 +50,31 @@ class TopicsFragment: Fragment(){
 
     fun bindAdapter(binding: BoxVoiceBinding){
         val db = Firebase.firestore
-        var action_box_voice: String
-        var instruction_voice: String
+        var action_box_voice: String = ""
+        var instruction_voice: String = ""
 
-        db.collection("dummy_data/dummy_data/box_data").document("96aPmuIpqXy1FwdIG8Ht")
+        db.collection("dummy_data/dummy_data/box_data").whereEqualTo("languaje", "ingles")
+            .whereEqualTo("theme", "ocupacion")
+            .limit(1)
             .get()
-            .addOnSuccessListener { document ->
-                if(document != null){
-                    action_box_voice = document.get("activity_box").toString()
-                    instruction_voice = document.get("instruction_voice").toString()
-
-                    binding.actionBoxVoice.setText(action_box_voice)
-                    binding.instructionVoice.setText(instruction_voice)
-
-                    binding.buttonGridConfirm.setOnClickListener {
-                        requireActivity().supportFragmentManager.beginTransaction()
-                            .replace(R.id.nav_host_fragment_activity_main, NotificationsFragment())
-                            .addToBackStack(null)
-                            .commit()
+            .addOnSuccessListener { documents ->
+                for(document in documents) {
+                    if (document != null) {
+                        action_box_voice = document.get("activity_box").toString()
+                        instruction_voice = document.get("instruction_voice").toString()
                     }
+                }
+                binding.actionBoxVoice.setText(action_box_voice)
+                binding.instructionVoice.setText(instruction_voice)
 
+                binding.buttonGridConfirm.setOnClickListener {
+                    requireActivity().supportFragmentManager.beginTransaction()
+                        .replace(
+                            R.id.nav_host_fragment_activity_main,
+                            NotificationsFragment()
+                        )
+                        .addToBackStack(null)
+                        .commit()
                 }
             }
             .addOnFailureListener { exception ->
