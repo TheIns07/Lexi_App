@@ -12,11 +12,15 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import apps.project.lexi_app.MainActivity
 import apps.project.lexi_app.databinding.FragmentNotificationsBinding
 import apps.project.lexi_app.ui.home.HomeFragment
+import apps.project.lexi_app.ui.logins.iniciosesion
+import com.google.firebase.auth.FirebaseAuth
 import java.io.File
 import java.io.FileOutputStream
 import java.util.*
+import kotlin.collections.ArrayList
 
 class NotificationsFragment : Fragment() {
 
@@ -37,7 +41,13 @@ class NotificationsFragment : Fragment() {
         _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        binding.tvUserName.text = HomeFragment.correo
+        if(iniciosesion.user.displayName != null){
+            binding.tvUserName.text = iniciosesion.user.displayName
+        }else{
+            binding.tvUserName.text = iniciosesion.user.email
+        }
+
+
 
         binding.ivShareAchievements.setOnClickListener{
             share()
@@ -48,6 +58,15 @@ class NotificationsFragment : Fragment() {
         }
         binding.btnBack.setOnClickListener {
             requireActivity().onBackPressed()
+        }
+
+        binding.tvCloseSession.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+            HomeFragment.languages = ArrayList()
+            HomeFragment.first=true
+            val intent: Intent = Intent(context, iniciosesion::class.java)
+            startActivity(intent)
+
         }
 
 

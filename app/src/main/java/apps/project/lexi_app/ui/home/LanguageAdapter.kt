@@ -48,6 +48,7 @@ class LanguageAdapter: BaseAdapter {
             val activity = v!!.context as AppCompatActivity
             val coursesFragment = CourseFragment()
             HomeFragment.idioma = language.name
+            CourseFragment.cargarCursosPorIdioma()
             activity.supportFragmentManager.beginTransaction()
                 .replace(R.id.nav_host_fragment_activity_main, coursesFragment).addToBackStack(null).commitAllowingStateLoss()
         }

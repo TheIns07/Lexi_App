@@ -10,10 +10,14 @@ import apps.project.lexi_app.MainActivity
 import apps.project.lexi_app.R
 import apps.project.lexi_app.ui.home.HomeFragment
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
 class iniciosesion : AppCompatActivity() {
+    companion object{
+         lateinit var user:FirebaseUser
+    }
     private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,9 +61,8 @@ class iniciosesion : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
 
-                    val user = auth.currentUser
-                    HomeFragment.user = auth.currentUser?.displayName.toString()
-                    HomeFragment.correo = auth.currentUser?.email.toString()
+                    user = auth.currentUser!!
+                    HomeFragment.cargarIdiomas()
                     val intent: Intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
 

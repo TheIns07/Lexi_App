@@ -18,9 +18,10 @@
 
         <ImageView
             android:id="@+id/iv_course"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:padding="5dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:foregroundGravity="center"
+            android:background="@drawable/blue_pink_main_background"
             android:src="@drawable/th_deportes"
             app:circularflow_defaultRadius="@dimen/activity_radius"
             app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +56,8 @@
                 android:layout_height="wrap_content"
                 android:indeterminate="false"
                 android:max="100"
-                android:paddingTop="30dp"
+                android:scaleY="2"
+                android:paddingTop="10dp"
                 android:progress="80"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/iv_course"
@@ -68,17 +70,19 @@
                 android:layout_height="wrap_content"
                 android:indeterminate="false"
                 android:max="100"
-                android:paddingTop="30dp"
+                android:scaleY="2"
+                android:paddingTop="10dp"
                 android:layout_marginHorizontal="8dp"/>
 
             <ProgressBar
                 android:id="@+id/pb_three"
                 style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                 android:layout_width="60dp"
+                android:scaleY="2"
                 android:layout_height="wrap_content"
                 android:indeterminate="false"
                 android:max="100"
-                android:paddingTop="30dp" />
+                android:paddingTop="10dp" />
 
         </LinearLayout>
 
