@@ -15,6 +15,8 @@ import apps.project.lexi_app.ui.Activities.Grid.Grid
 import apps.project.lexi_app.ui.Activities.Grid.GridAdapter
 import apps.project.lexi_app.ui.Activities.Grid.OnGridListener
 import apps.project.lexi_app.ui.Activities.Topics.TopicsFragment
+import apps.project.lexi_app.ui.courses.CourseFragment
+import apps.project.lexi_app.ui.home.HomeFragment
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
@@ -57,8 +59,8 @@ class ThemeDetailFragment : Fragment() {
         var mEdit: EditText = binding.rvOptions.findViewById(R.id.editText_main);
 
         db.collection("dummy_data/dummy_data/fill_data")
-            .whereEqualTo("languaje", "ingles")
-            .whereEqualTo("theme", "ocupacion")
+            .whereEqualTo("languaje", HomeFragment.idioma)
+            .whereEqualTo("theme", CourseFragment.theme)
             .limit(1)
             .get()
             .addOnSuccessListener { documents ->
@@ -92,8 +94,8 @@ class ThemeDetailFragment : Fragment() {
             var field3: String = ""
             var field4: String = ""
             db.collection("dummy_data/dummy_data/grid_data")
-                .whereEqualTo("languaje", "aleman")
-                .whereEqualTo("theme", "ocupacion")
+                .whereEqualTo("languaje", HomeFragment.idioma)
+                .whereEqualTo("theme", CourseFragment.theme)
                 .get()
                 .addOnSuccessListener { documents ->
                     for(document in documents) {

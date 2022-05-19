@@ -11,6 +11,8 @@ import androidx.fragment.app.Fragment
 import apps.project.lexi_app.R
 import apps.project.lexi_app.databinding.GridVoiceBinding
 import apps.project.lexi_app.ui.Activities.Topics.TopicsFragment
+import apps.project.lexi_app.ui.courses.CourseFragment
+import apps.project.lexi_app.ui.home.HomeFragment
 import apps.project.lexi_app.ui.themes.OnThemeListener
 import apps.project.lexi_app.ui.themes.ThemeDetailFragment
 import com.google.firebase.firestore.ktx.firestore
@@ -67,8 +69,8 @@ class GridVoiceFragment: Fragment() {
         var field4: String = ""
 
         db.collection("dummy_data/dummy_data/grid_data")
-            .whereEqualTo("languaje", "aleman")
-            .whereEqualTo("theme", "ocupacion")
+            .whereEqualTo("languaje", HomeFragment.idioma)
+            .whereEqualTo("theme", CourseFragment.theme)
             .limit(1)
             .get()
             .addOnSuccessListener { documents ->

@@ -36,7 +36,7 @@ class iniciosesion : AppCompatActivity() {
             valida_ingreso()
         }
         btn_contra.setOnClickListener{
-            val intent: Intent = Intent(this, Contrasena::class.java)
+            val intent = Intent(this, Contrasena::class.java)
             startActivity(intent)
         }
 

@@ -33,9 +33,9 @@ class ThemesFragment : Fragment() {
     private fun bindAdapter() {
         val adapter = ThemesCourseAdapter()
         adapter.list = arrayListOf(Theme(R.drawable.th_negocios,"Negocios"),
-            Theme(R.drawable.th_peliculas,"Películas/Series"),
+            Theme(R.drawable.th_peliculas,"Peliculas"),
             Theme(R.drawable.th_deportes,"Deportes"),
-            Theme(R.drawable.th_musica,"Música"),
+            Theme(R.drawable.th_musica,"Musica"),
             Theme(R.drawable.th_gastronomia,"Frases"),
             Theme(R.drawable.th_historia,"Historia"),
             Theme(R.drawable.th_moda,"Moda"),

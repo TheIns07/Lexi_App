@@ -24,6 +24,8 @@ class CourseFragment : Fragment() {
     private val binding get() = _binding!!
 
     companion object{
+        lateinit var theme:String
+
         fun cargarCursosPorIdioma(){
             val db = Firebase.firestore
             var listaCursos = ArrayList<Course>()
@@ -71,8 +73,8 @@ class CourseFragment : Fragment() {
     }
 
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
         val recyclerView:RecyclerView = binding.recyclerCourse
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.adapter = CourseAdapter(CourseProvider.coursesList)

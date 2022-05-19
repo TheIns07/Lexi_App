@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import apps.project.lexi_app.R
 import apps.project.lexi_app.databinding.CourseItemBinding
+import apps.project.lexi_app.ui.Activities.Topics.TopicsFragment
 import apps.project.lexi_app.ui.IntroductionFragment
 
 class CourseViewHolder (view: View): RecyclerView.ViewHolder(view){
@@ -21,10 +22,11 @@ class CourseViewHolder (view: View): RecyclerView.ViewHolder(view){
         binding.pbOne.progress = courseModel.progress
         binding.itemCourse.setOnClickListener{
                v ->
+            CourseFragment.theme = courseModel.name
            val activity = v!!.context as AppCompatActivity
-           val introductionFragment = IntroductionFragment()
+           val topicFragment = TopicsFragment()
            activity.supportFragmentManager.beginTransaction()
-              .replace(R.id.nav_host_fragment_activity_main, introductionFragment).addToBackStack(null).commitAllowingStateLoss()
+              .replace(R.id.nav_host_fragment_activity_main, topicFragment).addToBackStack(null).commitAllowingStateLoss()
         }
     }
 }

@@ -12,6 +12,8 @@ import apps.project.lexi_app.ui.Activities.Fill.Fill
 import apps.project.lexi_app.ui.Activities.Fill.FillAdapter
 import apps.project.lexi_app.ui.Activities.Fill.FillFragment
 import apps.project.lexi_app.ui.Activities.Fill.OnFillListener
+import apps.project.lexi_app.ui.courses.CourseFragment
+import apps.project.lexi_app.ui.home.HomeFragment
 import apps.project.lexi_app.ui.notifications.NotificationsFragment
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -52,9 +54,9 @@ class TopicsFragment: Fragment(){
         val db = Firebase.firestore
         var action_box_voice: String = ""
         var instruction_voice: String = ""
-
-        db.collection("dummy_data/dummy_data/box_data").whereEqualTo("languaje", "ingles")
-            .whereEqualTo("theme", "ocupacion")
+        db.collection("dummy_data/dummy_data/box_data")
+            .whereEqualTo("languaje", HomeFragment.idioma)
+            .whereEqualTo("theme", CourseFragment.theme)
             .limit(1)
             .get()
             .addOnSuccessListener { documents ->

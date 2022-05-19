@@ -33,6 +33,10 @@
             android:exported="true">
 
         </activity>
+        <activity android:name=".ui.logins.Contrasena"
+            android:exported="true">
+
+        </activity>
 
         <provider
             android:authorities="apps.project.lexi_app"

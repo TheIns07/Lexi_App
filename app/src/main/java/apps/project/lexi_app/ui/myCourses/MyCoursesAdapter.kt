@@ -4,6 +4,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import apps.project.lexi_app.databinding.ItemCoursesBinding
+import apps.project.lexi_app.ui.courses.CourseFragment
+import apps.project.lexi_app.ui.home.HomeFragment
 
 class MyCoursesAdapter : RecyclerView.Adapter<MyCoursesAdapter.MyViewHolder>() {
     lateinit var listener : OnCourseListener
@@ -24,6 +26,7 @@ class MyCoursesAdapter : RecyclerView.Adapter<MyCoursesAdapter.MyViewHolder>() {
             imgFlag.setImageResource(list[position].img)
 
             btnNext.setOnClickListener {
+                HomeFragment.idioma = list[position].name
                 listener?.onClick()
             }
         }

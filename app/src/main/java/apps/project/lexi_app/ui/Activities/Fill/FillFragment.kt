@@ -11,6 +11,8 @@ import apps.project.lexi_app.R
 import apps.project.lexi_app.databinding.CompleteTextBinding
 import apps.project.lexi_app.ui.Activities.Grid.GridVoiceFragment
 import apps.project.lexi_app.ui.Activities.Topics.TopicsFragment
+import apps.project.lexi_app.ui.courses.CourseFragment
+import apps.project.lexi_app.ui.home.HomeFragment
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
@@ -61,8 +63,8 @@ class FillFragment : Fragment(){
         var mEdit: EditText = binding.rvOptions.findViewById(R.id.editText_main);
 
         db.collection("dummy_data/dummy_data/fill_data")
-            .whereEqualTo("languaje", "ingles")
-            .whereEqualTo("theme", "ocupacion")
+            .whereEqualTo("languaje", HomeFragment.idioma)
+            .whereEqualTo("theme", CourseFragment.theme)
             .limit(1)
             .get()
             .addOnSuccessListener { documents ->
@@ -101,8 +103,8 @@ class FillFragment : Fragment(){
 
 
         db.collection("dummy_data/dummy_data/fill_data")
-            .whereEqualTo("languaje", "ingles")
-            .whereEqualTo("theme", "ocupacion")
+            .whereEqualTo("languaje", HomeFragment.idioma)
+            .whereEqualTo("theme", CourseFragment.theme)
             .limit(1)
             .get()
                 .addOnSuccessListener { documents ->

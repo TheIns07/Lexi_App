@@ -39,8 +39,8 @@ class MyCoursesFragment : Fragment() {
         }
     }
     private fun bindAdapter() {
-        adapter.list = arrayListOf(Course(10,"Inglés",58, R.drawable.uk_flag),
-            Course(1,"Francés",10, R.drawable.fr_flag))
+        adapter.list = arrayListOf(Course(10,"Ingles",58, R.drawable.inglaterra),
+            Course(1,"Aleman",10, R.drawable.alemania))
         binding.rvCourses.adapter = adapter
 
         adapter.listener = object : OnCourseListener {

@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import apps.project.lexi_app.databinding.ItemThemeBinding
+import apps.project.lexi_app.ui.courses.CourseFragment
 
 class ThemesCourseAdapter : RecyclerView.Adapter<ThemesCourseAdapter.MyViewHolder>() {
     lateinit var listener : OnThemeListener
@@ -22,6 +23,7 @@ class ThemesCourseAdapter : RecyclerView.Adapter<ThemesCourseAdapter.MyViewHolde
             textName.text = list[position].name
 
             containerTheme.setOnClickListener {
+                CourseFragment.theme = list[position].name.toLowerCase()
                 listener.onClick()
             }
         }
