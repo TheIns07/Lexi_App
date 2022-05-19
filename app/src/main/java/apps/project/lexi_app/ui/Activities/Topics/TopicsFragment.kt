@@ -22,11 +22,18 @@ class TopicsFragment: Fragment(){
 
     private var _binding: BoxVoiceBinding? = null
     private val binding get() = _binding!!
+    private var idioma:String?=null
+    private var ocupacion:String?=null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
+
+        arguments?.let {
+            idioma = it.getString(getString(R.string.llave_idioma))
+        }
+
         _binding = BoxVoiceBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
@@ -41,8 +48,13 @@ class TopicsFragment: Fragment(){
 
         binding.buttonGridConfirm.setOnClickListener {
             super.onDestroyView()
+            val bundle=Bundle()
+            bundle.putString(getString(R.string.llave_idioma),idioma)
+            bundle.putString(getString(R.string.llave_ocupacion),ocupacion)
+            val fragmento = NotificationsFragment()
+
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.nav_host_fragment_activity_main, NotificationsFragment())
+                .replace(R.id.nav_host_fragment_activity_main, fragmento)
                 .addToBackStack(null)
                 .commit()
         }
@@ -55,8 +67,9 @@ class TopicsFragment: Fragment(){
         var action_box_voice: String = ""
         var instruction_voice: String = ""
 
-        db.collection("dummy_data/dummy_data/box_data").whereEqualTo("languaje", "ingles")
-            .whereEqualTo("theme", "ocupacion")
+        db.collection("dummy_data/dummy_data/box_data")
+            .whereEqualTo("languaje", idioma)
+            .whereEqualTo("theme", ocupacion)
             .limit(1)
             .get()
             .addOnSuccessListener { documents ->

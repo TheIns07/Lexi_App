@@ -39,14 +39,16 @@ class ThemesFragment : Fragment() {
 
     private fun bindAdapter() {
         val adapter = ThemesCourseAdapter()
-        adapter.list = arrayListOf(Theme(R.drawable.th_negocios,"Negocios","negocios"),
+        adapter.list = arrayListOf(
+            Theme(R.drawable.th_negocios,"Negocios","negocios"),
             Theme(R.drawable.th_peliculas,"Películas/Series","peliculas"),
             Theme(R.drawable.th_deportes,"Deportes","deportes"),
             Theme(R.drawable.th_musica,"Música","musica"),
             Theme(R.drawable.th_gastronomia,"Frases","frases"),
             Theme(R.drawable.th_historia,"Historia","historia"),
             Theme(R.drawable.th_moda,"Moda","moda"),
-            Theme(R.drawable.th_tadiciones,"Tradiciones","tradiciones"))
+            Theme(R.drawable.th_tadiciones,"Tradiciones","tradiciones")
+        )
         binding.rvThemes.adapter = adapter
 
         adapter.listener = object : OnThemeListener {

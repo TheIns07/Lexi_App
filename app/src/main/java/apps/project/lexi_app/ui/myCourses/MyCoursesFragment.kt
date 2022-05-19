@@ -50,7 +50,7 @@ class MyCoursesFragment : Fragment() {
         adapter.listener = object : OnCourseListener {
             override fun onClick(idioma:String) {
                 val bundle=Bundle()
-                bundle.putString(getString(R.string.llave_idioma),idioma.lowercase())
+                bundle.putString(getString(R.string.llave_idioma),idioma)//lowercase()
                 val fragmento=  ThemesFragment()
                 fragmento.arguments=bundle
                 requireActivity().supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment_activity_main,

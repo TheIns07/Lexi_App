@@ -27,11 +27,11 @@ class CourseFragment : Fragment() {
     private val binding get() = _binding!!
     // TODO: Rename and change types of parameters
     private var idioma: String? = null
+    private var ocupacion: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            //bundle.putString("Idioma",language.name)
             idioma = it.getString(getString(R.string.llave_idioma))
         }
     }
@@ -44,13 +44,18 @@ class CourseFragment : Fragment() {
         val root: View = binding.root
         val recyclerView:RecyclerView = binding.recyclerCourse
         recyclerView.layoutManager = LinearLayoutManager(context)
-        recyclerView.adapter = CourseAdapter(CourseProvider.courseList,idioma!!)
+        recyclerView.adapter = CourseAdapter(CourseProvider.courseList,idioma!!)//lowercase()
 
         println("LexiApp: CourseFragment : $idioma")
 
         recyclerView.setOnClickListener {
+            val bundle=Bundle()
+            bundle.putString(getString(R.string.llave_idioma),idioma)
+            bundle.putString(getString(R.string.llave_ocupacion),ocupacion)
+            val fragmento=TopicsFragment()
+            fragmento.arguments=bundle
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.nav_host_fragment_activity_main, TopicsFragment())
+                .replace(R.id.nav_host_fragment_activity_main, fragmento)
                 .commit()
         }
 
