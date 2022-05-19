@@ -41,16 +41,20 @@ class MyCoursesFragment : Fragment() {
     }
     private fun bindAdapter() {
         val listaIdiomas=arrayListOf(
-            Course(10,"Inglés",58, R.drawable.uk_flag),
-            Course(1,"Francés",10, R.drawable.fr_flag)
+            Course(10,"Ingles",58, R.drawable.uk_flag),
+            Course(1,"Frances",10, R.drawable.fr_flag)
         )
         adapter.list =listaIdiomas
         binding.rvCourses.adapter = adapter
 
         adapter.listener = object : OnCourseListener {
-            override fun onClick() {
+            override fun onClick(idioma:String) {
+                val bundle=Bundle()
+                bundle.putString(getString(R.string.llave_idioma),idioma.lowercase())
+                val fragmento=  ThemesFragment()
+                fragmento.arguments=bundle
                 requireActivity().supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment_activity_main,
-                    ThemesFragment()
+                    fragmento
                 ).addToBackStack(null).commit()
             }
         }

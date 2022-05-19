@@ -8,8 +8,12 @@ import androidx.recyclerview.widget.RecyclerView
 import apps.project.lexi_app.databinding.ItemCoursesBinding
 
 class MyCoursesAdapter : RecyclerView.Adapter<MyCoursesAdapter.MyViewHolder>() {
+
     lateinit var listener : OnCourseListener
+
     var list = ArrayList<Course>()
+
+
         @SuppressLint("NotifyDataSetChanged")
         set(value) {
             field = value
@@ -29,7 +33,7 @@ class MyCoursesAdapter : RecyclerView.Adapter<MyCoursesAdapter.MyViewHolder>() {
             imgFlag.setImageResource(list[position].img)
 
             btnNext.setOnClickListener {
-                listener.onClick()
+                listener.onClick(list[position].name)
             }
         }
     }
@@ -46,5 +50,5 @@ class MyCoursesAdapter : RecyclerView.Adapter<MyCoursesAdapter.MyViewHolder>() {
 }
 
 interface OnCourseListener{
-    fun onClick()
+    fun onClick(idioma:String)
 }

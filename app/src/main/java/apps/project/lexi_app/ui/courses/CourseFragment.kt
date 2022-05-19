@@ -26,13 +26,13 @@ class CourseFragment : Fragment() {
     private var _binding: FragmentCourseBinding? = null
     private val binding get() = _binding!!
     // TODO: Rename and change types of parameters
-    private var Idioma: String? = null
+    private var idioma: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             //bundle.putString("Idioma",language.name)
-            Idioma = it.getString("Idioma")
+            idioma = it.getString(getString(R.string.llave_idioma))
         }
     }
 
@@ -44,9 +44,9 @@ class CourseFragment : Fragment() {
         val root: View = binding.root
         val recyclerView:RecyclerView = binding.recyclerCourse
         recyclerView.layoutManager = LinearLayoutManager(context)
-        recyclerView.adapter = CourseAdapter(CourseProvider.courseList)
+        recyclerView.adapter = CourseAdapter(CourseProvider.courseList,idioma!!)
 
-        println("LexiApp: CourseFragment")
+        println("LexiApp: CourseFragment : $idioma")
 
         recyclerView.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction()
@@ -57,16 +57,8 @@ class CourseFragment : Fragment() {
         return root
     }
 
+    /*
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment CourseFragment.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             CourseFragment().apply {
@@ -76,4 +68,7 @@ class CourseFragment : Fragment() {
                 }
             }
     }
+
+
+    */
 }

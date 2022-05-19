@@ -48,7 +48,7 @@ class LanguageAdapter: BaseAdapter {
         view.setOnClickListener { v ->
             val activity = v!!.context as AppCompatActivity
             val bundle= Bundle()
-            bundle.putString("Idioma",language.name)
+            bundle.putString(activity.getString(R.string.llave_idioma),language.name)
 
             val coursesFragment = CourseFragment()
             coursesFragment.arguments=bundle

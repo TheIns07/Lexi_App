@@ -22,7 +22,7 @@ class ThemesCourseAdapter : RecyclerView.Adapter<ThemesCourseAdapter.MyViewHolde
             textName.text = list[position].name
 
             containerTheme.setOnClickListener {
-                listener.onClick()
+                listener.onClick(list[position].claveocupacion)
             }
         }
     }
@@ -39,5 +39,5 @@ class ThemesCourseAdapter : RecyclerView.Adapter<ThemesCourseAdapter.MyViewHolde
 }
 
 interface OnThemeListener{
-    fun onClick()
+    fun onClick(ocupacion:String)
 }

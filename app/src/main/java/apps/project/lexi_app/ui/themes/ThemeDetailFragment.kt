@@ -21,13 +21,20 @@ import com.google.firebase.ktx.Firebase
 class ThemeDetailFragment : Fragment() {
     private var _binding: FragmentThemeDetailBinding? = null
     private val binding get() = _binding!!
+    private var idioma:String?=null
+    private var ocupacion:String?=null
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentThemeDetailBinding.inflate(layoutInflater, container, false)
+        arguments?.let {
+            idioma = it.getString(getString(R.string.llave_idioma))
+            ocupacion = it.getString(getString(R.string.llave_ocupacion))
+        }
+
         return binding.root
     }
 
@@ -48,7 +55,7 @@ class ThemeDetailFragment : Fragment() {
         }
     }
 
-    fun bindAdapter(binding: FragmentThemeDetailBinding){
+    private fun bindAdapter(binding: FragmentThemeDetailBinding){
             val db = Firebase.firestore
             var gridAction: String = ""
             var gridTitle: String = ""
@@ -56,9 +63,10 @@ class ThemeDetailFragment : Fragment() {
             var field2: String = ""
             var field3: String = ""
             var field4: String = ""
+        println("LexiApp: ThemeDetailFragment: idioma=$idioma, ocupacion=$ocupacion")
             db.collection("dummy_data/dummy_data/grid_data")
-                .whereEqualTo("languaje", "aleman")
-                .whereEqualTo("theme", "ocupacion")
+                .whereEqualTo("languaje", idioma)
+                .whereEqualTo("theme", ocupacion)
                 .get()
                 .addOnSuccessListener { documents ->
                     for(document in documents) {

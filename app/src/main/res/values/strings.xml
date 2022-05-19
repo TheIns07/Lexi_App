@@ -13,4 +13,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="texto_avance">%s %%</string>
     <string name="texto_cursos_persona">Cursos de %s</string>
+    <string name="llave_idioma">Idioma</string>
+    <string name="llave_ocupacion">Ocupacion</string>
 </resources>

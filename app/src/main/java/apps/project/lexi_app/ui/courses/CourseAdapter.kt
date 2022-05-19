@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import apps.project.lexi_app.R
 
-class CourseAdapter(private val courseList: List<Course>) : RecyclerView.Adapter<CourseViewHolder>() {
+class CourseAdapter(private val courseList: List<Course>, private val idioma:String) : RecyclerView.Adapter<CourseViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CourseViewHolder {
         val layoutInflater =LayoutInflater.from(parent.context)
         return CourseViewHolder(layoutInflater.inflate(R.layout.course_item, parent, false))
