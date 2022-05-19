@@ -20,6 +20,7 @@ class IntroductionFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = IntroductionBinding.inflate(layoutInflater, container, false)
+        println("LexiApp: IntroductionFragment")
         val root: View = binding.root
 
         return root

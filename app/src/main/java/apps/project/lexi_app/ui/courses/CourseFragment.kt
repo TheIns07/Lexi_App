@@ -46,6 +46,8 @@ class CourseFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.adapter = CourseAdapter(CourseProvider.courseList)
 
+        println("LexiApp: CourseFragment")
+
         recyclerView.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.nav_host_fragment_activity_main, TopicsFragment())

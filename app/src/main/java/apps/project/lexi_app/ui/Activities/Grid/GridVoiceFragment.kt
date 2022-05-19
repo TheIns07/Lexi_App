@@ -31,7 +31,7 @@ class GridVoiceFragment: Fragment() {
     ): View? {
         _binding = GridVoiceBinding.inflate(layoutInflater, container, false)
         val root: View = binding.root
-
+        println("LexiApp: GridVoiceFragment")
         return root
     }
 
