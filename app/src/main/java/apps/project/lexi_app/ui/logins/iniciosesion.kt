@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import apps.project.lexi_app.MainActivity
 import apps.project.lexi_app.R
+import apps.project.lexi_app.ui.home.HomeFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -57,6 +58,8 @@ class iniciosesion : AppCompatActivity() {
                 if (task.isSuccessful) {
 
                     val user = auth.currentUser
+                    HomeFragment.user = auth.currentUser?.displayName.toString()
+                    HomeFragment.correo = auth.currentUser?.email.toString()
                     val intent: Intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
 

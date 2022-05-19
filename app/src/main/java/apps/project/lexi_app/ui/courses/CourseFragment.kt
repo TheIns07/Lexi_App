@@ -5,36 +5,27 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import apps.project.lexi_app.R
 import apps.project.lexi_app.databinding.FragmentCourseBinding
 import apps.project.lexi_app.ui.Activities.Topics.TopicsFragment
+import apps.project.lexi_app.ui.home.HomeFragment
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [CourseFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class CourseFragment : Fragment() {
 
     private var _binding: FragmentCourseBinding? = null
     private val binding get() = _binding!!
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+        cargarCursosPorIdioma()
+
     }
 
     override fun onCreateView(
@@ -45,7 +36,7 @@ class CourseFragment : Fragment() {
         val root: View = binding.root
         val recyclerView:RecyclerView = binding.recyclerCourse
         recyclerView.layoutManager = LinearLayoutManager(context)
-        recyclerView.adapter = CourseAdapter(CourseProvider.courseList)
+        recyclerView.adapter = CourseAdapter(CourseProvider.coursesList)
 
         recyclerView.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction()
@@ -53,26 +44,49 @@ class CourseFragment : Fragment() {
                 .commit()
         }
 
+        binding.btnBack.setOnClickListener {
+            requireActivity().onBackPressed()
+        }
+
+
+
         return root
     }
+    fun cargarCursosPorIdioma(){
+        val db = Firebase.firestore
+        var listaCursos = ArrayList<Course>()
+        var name: String = ""
+        var image: Int = 0
+        var progress: Int = 0
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment CourseFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            CourseFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+        db.collection("themes")
+            .whereEqualTo("idioma", HomeFragment.idioma)
+            .get()
+            .addOnSuccessListener { documents ->
+                for(document in documents) {
+                    if (document != null) {
+                        name = document.get("nombre").toString()
+                        image = document.get("imagen").toString().toInt()
+                        db.collection("/themes/"+document.id+"/user").document(HomeFragment.user).get()
+                            .addOnSuccessListener { doc ->
+                                if(doc.get("progrees") != null){
+                                    progress = doc.get("progress").toString().toInt()
+                                }else{
+                                    progress = 0
+                                }
+                            }
+                    }
+                    listaCursos.add(Course(image, name, progress))
                 }
+                CourseProvider.coursesList = listaCursos
+
             }
+            .addOnFailureListener { exception ->
+                Toast.makeText(context, "Error al cargar los datos", Toast.LENGTH_SHORT).show()
+            }
+
     }
+
+
+
 }

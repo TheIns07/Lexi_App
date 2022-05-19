@@ -1,36 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginHorizontal="25dp"
+    android:layout_marginVertical="10dp"
     android:orientation="vertical">
-    <LinearLayout
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_language"
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        app:shapeAppearanceOverlay="@style/RoundedSquare"
+        app:strokeColor="@color/gray"
+        app:strokeWidth="2dp" />
+
+
+    <TextView
+        android:id="@+id/tv_name_language"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="25dp"
-        android:layout_marginVertical="15dp"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/iv_language"
-            android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:padding="2dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginHorizontal="25dp"
-            />
-
-        <TextView
-            android:id="@+id/tv_name_language"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Language"
-            android:fontFamily="@font/myriadpro_regular"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:gravity="center_horizontal"/>
-
-
-    </LinearLayout>
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/myriadpro_regular"
+        android:gravity="center_horizontal"
+        android:text="Language"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
 
 </LinearLayout>
