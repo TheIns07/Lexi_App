@@ -52,10 +52,10 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/txtTituloCursos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cursos de Nombre"
+                android:text="@string/texto_cursos_persona"
                 android:textSize="32sp"
                 android:textColor="@color/black"
                 android:gravity="center"

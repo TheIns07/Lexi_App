@@ -33,6 +33,7 @@ class FillFragment : Fragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         bindAdapter(binding)
+        println("LexiApp: FillFragment")
         super.onViewCreated(view, savedInstanceState)
         binding.btnBack.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction()

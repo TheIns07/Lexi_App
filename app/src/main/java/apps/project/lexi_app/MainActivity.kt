@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        Thread.sleep(2000);
+        Thread.sleep(2000)
         setTheme(R.style.SplashTheme)
         setTheme(R.style.Theme_Lexi_App)
         super.onCreate(savedInstanceState)
@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
             )
         )
         //setupActionBarWithNavController(navController, appBarConfiguration)
+        navView.setupWithNavController(navController)
     }
 }
 

@@ -1,6 +1,7 @@
 package apps.project.lexi_app.ui.home
 
 import android.content.Context
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -46,9 +47,12 @@ class LanguageAdapter: BaseAdapter {
 
         view.setOnClickListener { v ->
             val activity = v!!.context as AppCompatActivity
+            val bundle= Bundle()
+            bundle.putString("Idioma",language.name)
+
             val coursesFragment = CourseFragment()
-            activity.supportFragmentManager.beginTransaction()
-                .replace(R.id.nav_host_fragment_activity_main, coursesFragment).addToBackStack(null).commitAllowingStateLoss()
+            coursesFragment.arguments=bundle
+            activity.supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment_activity_main, coursesFragment).addToBackStack(null).commitAllowingStateLoss()
         }
 
 

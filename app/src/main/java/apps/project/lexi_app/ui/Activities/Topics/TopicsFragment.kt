@@ -32,6 +32,7 @@ class TopicsFragment: Fragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         bindAdapter(binding)
+        println("LexiApp: TopicsFragment")
         binding.btnBack.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction()
                 .remove(this).commit()

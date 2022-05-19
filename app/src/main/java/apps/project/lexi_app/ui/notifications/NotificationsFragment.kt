@@ -28,6 +28,7 @@ class NotificationsFragment : Fragment() {
             ViewModelProvider(this).get(NotificationsViewModel::class.java)
 
         _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
+        println("LexiApp: NotificationsFragment")
         val root: View = binding.root
 
         binding.ivShareAchievements.setOnClickListener{

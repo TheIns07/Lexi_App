@@ -33,6 +33,7 @@ class ThemeDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        println("LexiApp: ThemeDetailFragment")
         bindAdapter(binding)
 
         binding.titleGrid.setOnClickListener {

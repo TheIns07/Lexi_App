@@ -16,7 +16,7 @@ class ThemesFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentThemesBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
@@ -27,6 +27,7 @@ class ThemesFragment : Fragment() {
             requireActivity().supportFragmentManager.beginTransaction()
                 .remove(this).commit()
         }
+        println("LexiApp: ThemesFragment")
         bindAdapter()
     }
 
