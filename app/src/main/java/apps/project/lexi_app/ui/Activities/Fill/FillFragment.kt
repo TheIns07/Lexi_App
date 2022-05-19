@@ -8,11 +8,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import apps.project.lexi_app.R
 import apps.project.lexi_app.databinding.CompleteTextBinding
-import apps.project.lexi_app.databinding.GridVoiceBinding
-import apps.project.lexi_app.ui.Activities.Grid.Grid
-import apps.project.lexi_app.ui.Activities.Grid.GridAdapter
 import apps.project.lexi_app.ui.Activities.Grid.GridVoiceFragment
-import apps.project.lexi_app.ui.Activities.Grid.OnGridListener
 import apps.project.lexi_app.ui.Activities.Topics.TopicsFragment
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
