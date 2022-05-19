@@ -57,6 +57,7 @@ class CourseFragment : Fragment() {
         return root
     }
 
+
     /*
     companion object {
         @JvmStatic

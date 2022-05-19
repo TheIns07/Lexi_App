@@ -38,6 +38,7 @@ class ThemeDetailFragment : Fragment() {
         return binding.root
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         println("LexiApp: ThemeDetailFragment")

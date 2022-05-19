@@ -19,6 +19,7 @@ import com.google.firebase.ktx.Firebase
 
 class TopicsFragment: Fragment(){
 
+
     private var _binding: BoxVoiceBinding? = null
     private val binding get() = _binding!!
 

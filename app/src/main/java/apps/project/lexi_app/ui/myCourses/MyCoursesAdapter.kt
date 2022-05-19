@@ -14,6 +14,7 @@ class MyCoursesAdapter : RecyclerView.Adapter<MyCoursesAdapter.MyViewHolder>() {
     var list = ArrayList<Course>()
 
 
+
         @SuppressLint("NotifyDataSetChanged")
         set(value) {
             field = value

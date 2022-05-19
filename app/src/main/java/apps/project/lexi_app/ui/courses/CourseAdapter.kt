@@ -16,6 +16,7 @@ class CourseAdapter(private val courseList: List<Course>, private val idioma:Str
         holder.render(item)
     }
 
+
     override fun getItemCount(): Int {
         return courseList.size
     }

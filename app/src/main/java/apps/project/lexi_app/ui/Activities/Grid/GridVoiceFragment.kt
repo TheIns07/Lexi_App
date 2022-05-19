@@ -66,6 +66,7 @@ class GridVoiceFragment: Fragment() {
         var field3: String = ""
         var field4: String = ""
 
+
         db.collection("dummy_data/dummy_data/grid_data")
             .whereEqualTo("languaje", "aleman")
             .whereEqualTo("theme", "ocupacion")
