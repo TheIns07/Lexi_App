@@ -14,19 +14,16 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d9df39e-2f63-455a-a9f5-f816d2223529" name="Default Changelist" comment="">
+    <list default="true" id="2d9df39e-2f63-455a-a9f5-f816d2223529" name="Default Changelist" comment="Se traspasa idioma y tema entre Fragments a través de bundle y consulta en firestore.">
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/apps/project/lexi_app/ui/courses/CourseAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/apps/project/lexi_app/ui/courses/CourseAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/apps/project/lexi_app/ui/courses/CourseFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/apps/project/lexi_app/ui/courses/CourseFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/apps/project/lexi_app/ui/home/LanguageAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/apps/project/lexi_app/ui/home/LanguageAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/apps/project/lexi_app/ui/myCourses/MyCoursesAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/apps/project/lexi_app/ui/myCourses/MyCoursesAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/apps/project/lexi_app/ui/myCourses/MyCoursesFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/apps/project/lexi_app/ui/myCourses/MyCoursesFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/apps/project/lexi_app/ui/themes/Theme.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/apps/project/lexi_app/ui/themes/Theme.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/apps/project/lexi_app/ui/themes/ThemeDetailFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/apps/project/lexi_app/ui/themes/ThemeDetailFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/apps/project/lexi_app/ui/themes/ThemesCourseAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/apps/project/lexi_app/ui/themes/ThemesCourseAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/apps/project/lexi_app/ui/themes/ThemesFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/apps/project/lexi_app/ui/themes/ThemesFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +119,7 @@
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -225,6 +222,28 @@
       <option name="presentableId" value="Default" />
       <updated>1650927994003</updated>
     </task>
+    <task id="LOCAL-00001" summary="Se traspasa idioma y tema entre Fragments a través de bundle y consulta en firestore.">
+      <created>1652946603416</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1652946603416</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Se traspasa idioma y tema entre Fragments a través de bundle y consulta en firestore.">
+      <created>1652946812834</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1652946812834</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Se traspasa idioma y tema entre Fragments a través de bundle y consulta en firestore.">
+      <created>1652946844806</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1652946844806</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -241,5 +260,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Se traspasa idioma y tema entre Fragments a través de bundle y consulta en firestore." />
+    <option name="LAST_COMMIT_MESSAGE" value="Se traspasa idioma y tema entre Fragments a través de bundle y consulta en firestore." />
   </component>
 </project>
