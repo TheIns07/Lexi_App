@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginVertical="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/itemCourse"
+    app:cardCornerRadius="8dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/grid_levels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp">
+
+        <ImageView
+            android:id="@+id/iv_course"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:foregroundGravity="center"
+            android:background="@drawable/blue_pink_main_background"
+            android:src="@drawable/th_deportes"
+            app:circularflow_defaultRadius="@dimen/activity_radius"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_name_course"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:fontFamily="@font/myriadpro_bold"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/iv_course"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Nivel 1 Basico" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_course"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name_course">
+
+            <ProgressBar
+                android:id="@+id/pb_one"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:indeterminate="false"
+                android:max="100"
+                android:scaleY="2"
+                android:paddingTop="10dp"
+                android:progress="80"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_course"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name_course" />
+
+            <ProgressBar
+                android:id="@+id/pb_two"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:indeterminate="false"
+                android:max="100"
+                android:scaleY="2"
+                android:paddingTop="10dp"
+                android:layout_marginHorizontal="8dp"/>
+
+            <ProgressBar
+                android:id="@+id/pb_three"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="60dp"
+                android:scaleY="2"
+                android:layout_height="wrap_content"
+                android:indeterminate="false"
+                android:max="100"
+                android:paddingTop="10dp" />
+
+        </LinearLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
