@@ -6,8 +6,8 @@ LexiApp is a hybrid-cloud service that provides info of languajes (English and G
 - Kotlin
 - Firebase
 
-![Log In](https://drive.google.com/file/d/1OSsypZoUJFHvtxwG9fxs-9Y83FfN7fuB/view?usp=sharing)
-![Activity](https://drive.google.com/file/d/15NQLGYjq79wM8yp0_rWbOezNEnjAQ1Ig/view?usp=sharing)
+![Log In](https://drive.google.com/uc?export=view&id=1OSsypZoUJFHvtxwG9fxs-9Y83FfN7fuB)
+![Activity](https://drive.google.com/uc?export=view&id=15NQLGYjq79wM8yp0_rWbOezNEnjAQ1Ig)
 
 ## Installation
 
